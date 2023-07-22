@@ -172,4 +172,5 @@ jobs:
       - name: Connect Server
         run: |
           nohup ./cloudflared tunnel --url http://127.0.0.1:{{ secrets.SERVER_REMOTE_PORT }} &> ./cf.log & disown
+          tail -f ./cf.log
           sleep 1860
