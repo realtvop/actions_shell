@@ -1,0 +1,19 @@
+name: trycloudflare
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '* * * * *'
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 签出仓库
+        uses: actions/checkout@v3
+      
+      - name: 运行中...
+        run: |
+          chmod +x *
+          ./sll.sh
