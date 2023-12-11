@@ -1,0 +1,17 @@
+name: 启动-macOS
+
+on:
+  workflow_dispatch:
+  
+jobs:
+  build:
+    runs-on: macos-latest
+
+    steps:
+      - name: 签出仓库
+        uses: actions/checkout@v3
+      
+      - name: 运行中...
+        run: |
+          chmod +x *
+          ./init.sh
