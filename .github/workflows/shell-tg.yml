@@ -1,4 +1,4 @@
-name: 启动2tg
+name: 启动=>tg
 
 on:
   workflow_dispatch:
