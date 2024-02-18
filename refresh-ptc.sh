@@ -6,7 +6,7 @@ cd tmp
 sudo apt install axel -y
 
 # 设置 JSON 文件的 URL
-json_url="https://ptc.realtvop.eu.org/pt_songs.json"
+json_url="https://ptc.realtvop.top/pt_songs.json"
 
 # 使用 curl 获取 JSON 文件内容，并提取其中所有被双引号引起来的链接
 links=$(curl -s "$json_url" | grep -o '"https\?[^"]*"' | tr -d '"')
