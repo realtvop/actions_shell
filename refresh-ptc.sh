@@ -14,10 +14,12 @@ links=$(curl -s "$json_url" | grep -o '"https\?[^"]*"' | tr -d '"')
 for ((i = 1; i <= 3; i++)); do
     # 遍历链接列表，使用 curl 访问每个链接
     for link in $links; do
-        echo "访问链接: $link"
-        # curl -s --progress-bar -O /dev/null "$link"
-        axel "$link"
-        # 这里你可以根据需要对访问结果进行处理，比如保存到文件或输出到终端
+        if [[ $link != *"phitogether.fun"* ]];
+            echo "访问链接: $link"
+            # curl -s --progress-bar -O /dev/null "$link"
+            axel "$link"
+            # 这里你可以根据需要对访问结果进行处理，比如保存到文件或输出到终端
+        fi
     done
     rm -rf *
 done
